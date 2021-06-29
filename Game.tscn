@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/Tiles/background.png" type="Texture" id=1]
+[ext_resource path="res://assets/Tiles/bg_2.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/TileMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game.gd" type="Script" id=5]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Foreground" type="TextureRect" parent="Background"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" parent="." instance=ExtResource( 3 )]
+tile_data = PoolIntArray( 65534, 0, 0, 65535, 0, 2, 15, 0, 0, 16, 0, 2, 131070, 0, 65536, 131071, 0, 65539, 65551, 0, 65536, 65552, 0, 65539, 196606, 0, 65536, 196607, 0, 65538, 131087, 0, 65536, 131088, 0, 65539, 262142, 0, 65541, 262143, 0, 65538, 196623, 0, 65541, 196624, 0, 65538, 327678, 0, 65541, 327679, 0, 65538, 262159, 0, 65536, 262160, 0, 65538, 393214, 0, 65541, 393215, 0, 65538, 327695, 0, 65536, 327696, 0, 65539, 458750, 0, 65536, 458751, 0, 65539, 393231, 0, 65536, 393232, 0, 65538, 524286, 0, 65541, 524287, 0, 65539, 458764, 0, 0, 458765, 0, 131076, 458766, 0, 131076, 458767, 0, 131077, 458768, 0, 65538, 589822, 0, 65536, 589823, 0, 65539, 524294, 0, 0, 524295, 0, 1, 524296, 0, 1, 524297, 0, 131076, 524298, 0, 131076, 524299, 0, 1, 524300, 0, 131077, 524301, 0, 65537, 524302, 0, 65537, 524303, 0, 3, 524304, 0, 131074, 655358, 0, 65541, 655359, 0, 131075, 589824, 0, 131076, 589825, 0, 131076, 589826, 0, 131076, 589827, 0, 131076, 589828, 0, 131076, 589829, 0, 131076, 589830, 0, 131077, 589831, 0, 65537, 589832, 0, 65537, 589833, 0, 65537, 589834, 0, 65537, 589835, 0, 65537, 589836, 0, 65537, 589837, 0, 65537, 589838, 0, 65537, 589839, 0, 65539, 720894, 0, 131072, 720895, 0, 131073, 655360, 0, 131073, 655361, 0, 4, 655362, 0, 131073, 655363, 0, 4, 655364, 0, 131073, 655365, 0, 4, 655366, 0, 131073, 655367, 0, 4, 655368, 0, 131073, 655369, 0, 4, 655370, 0, 131073, 655371, 0, 131073, 655372, 0, 4, 655373, 0, 131073, 655374, 0, 131073, 655375, 0, 131074 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 45.8519, 136.398 )
+jump_speed = -350
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
