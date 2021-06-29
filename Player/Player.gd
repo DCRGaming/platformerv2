@@ -1,5 +1,5 @@
 extends KinematicBody2D
-# Player complete
+
 class_name Player
 
 export(int) var gravity = 1000

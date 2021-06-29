@@ -252,7 +252,7 @@ graph_offset = Vector2( 147, -61.056 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=33]
 
 [node name="Player" type="KinematicBody2D"]
-collision_mask = 0
+collision_mask = 2
 script = ExtResource( 2 )
 jump_speed = -300
 dash_speed = 300
@@ -260,7 +260,7 @@ dash_speed = 300
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 13 )
 vframes = 38
-frame = 10
+frame = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.842798, 0.655509 )
