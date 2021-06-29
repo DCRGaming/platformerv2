@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Player/Dash.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -17,6 +17,7 @@ height = 6.52473
 [sub_resource type="Animation" id=2]
 resource_name = "Attack"
 length = 0.4
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -251,6 +252,10 @@ graph_offset = Vector2( 147, -61.056 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=33]
 
+[sub_resource type="CapsuleShape2D" id=34]
+radius = 3.06959
+height = 7.65147
+
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 2
 script = ExtResource( 2 )
@@ -281,6 +286,16 @@ tree_root = SubResource( 32 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 33 )
+
+[node name="HitboxPosition" type="Position2D" parent="."]
+position = Vector2( -0.817581, 2.6 )
+
+[node name="Hitbox" type="Area2D" parent="HitboxPosition"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxPosition/Hitbox"]
+position = Vector2( 11.6691, 1.90735e-06 )
+rotation = 1.5708
+shape = SubResource( 34 )
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 8 )

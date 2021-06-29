@@ -18,11 +18,12 @@ onready var animation_state = $AnimationTree.get("parameters/playback")
 func set_direction_right() -> void:
 	direction = "right"
 	$Sprite.flip_h = false
-
+	$HitboxPosition.rotation_degrees = 0
 
 func set_direction_left() -> void:
 	direction = "left"
 	$Sprite.flip_h = true
+	$HitboxPosition.rotation_degrees = 180
 
 
 func update_direction(input_direction_x) -> void:
