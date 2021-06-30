@@ -4,7 +4,7 @@ func enter() -> void:
 	player.animation_state.travel("Idle")
 
 
-func physics_update(_delta: float) -> void:
+func physics_update(delta: float) -> void:
 	
 	if not player.is_on_floor():
 		if player.velocity.y > 0:
@@ -12,6 +12,9 @@ func physics_update(_delta: float) -> void:
 		else:
 			state_machine.transition_to("Jump")
 		return
+		
+	player.velocity.y = player.gravity * delta
+	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 	
 	if Input.is_action_just_pressed("jump"):
 		state_machine.transition_to("Jump")

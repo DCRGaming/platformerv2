@@ -55,8 +55,16 @@ func _physics_process(delta: float) -> void:
 			velocity.y = gravity * delta
 			velocity = move_and_slide(velocity, Vector2.UP)
 		states.DEATH:
-			pass
+			$AnimatedSprite.play("Death")
+			$CollisionShape2D.disabled = true # ensure player doesn't run into nothing
+			yield($AnimatedSprite, "animation_finished")
+			queue_free()
 
 
 func _on_MoveTimer_timeout() -> void:
 	input_direction_x = get_random_direction()
+
+
+func _on_Hurtbox_area_entered(area: Area2D) -> void:
+	if area.owner is Player:
+		state = states.DEATH

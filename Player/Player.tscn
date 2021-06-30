@@ -44,6 +44,18 @@ tracks/1/keys = {
 "method": "on_attack_finished"
 } ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("HitboxPosition/Hitbox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "Dash"
@@ -296,6 +308,7 @@ position = Vector2( -0.817581, 2.6 )
 position = Vector2( 11.6691, 1.90735e-06 )
 rotation = 1.5708
 shape = SubResource( 34 )
+disabled = true
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 8 )
