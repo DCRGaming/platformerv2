@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lever_turned_right.png-bde44b34624c74ee5dc26251957ae756.stex"
+path="res://.import/misc_sheet.png-7e5c77ac1124a19e6c1ccf642cb87daf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/HUD/lever_turned_right.png"
-dest_files=[ "res://.import/lever_turned_right.png-bde44b34624c74ee5dc26251957ae756.stex" ]
+source_file="res://assets/HUD/misc_sheet.png"
+dest_files=[ "res://.import/misc_sheet.png-7e5c77ac1124a19e6c1ccf642cb87daf.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

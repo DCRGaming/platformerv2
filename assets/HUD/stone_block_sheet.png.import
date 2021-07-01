@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spikes_trap.png-c9a0effc86f934f229132ef1f09a2dc3.stex"
+path="res://.import/stone_block_sheet.png-bb1d7002492dfe0851d369e5d41f02cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/HUD/spikes_trap.png"
-dest_files=[ "res://.import/spikes_trap.png-c9a0effc86f934f229132ef1f09a2dc3.stex" ]
+source_file="res://assets/HUD/stone_block_sheet.png"
+dest_files=[ "res://.import/stone_block_sheet.png-bb1d7002492dfe0851d369e5d41f02cb.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
