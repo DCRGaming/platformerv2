@@ -6,11 +6,14 @@ export(int) var gravity = 1000
 export(int) var jump_speed = -250
 export(int) var walk_speed: int = 75
 export(int) var dash_speed: int = 100
+export(int) var push_speed: int = 50
+export(int) var num_dashes: int = 1
 
 var velocity: Vector2
 var direction = "right"
 var is_attacking = false
 var is_dashing = false
+
 
 onready var animation_state = $AnimationTree.get("parameters/playback")
 

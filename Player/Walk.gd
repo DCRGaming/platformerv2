@@ -9,9 +9,7 @@ func physics_update(delta: float) -> void:
 	if not player.is_on_floor():
 		if player.velocity.y > 0:
 			state_machine.transition_to("Fall")
-		else:
-			state_machine.transition_to("Jump")
-		return
+			return
 	
 	var input_direction_x: float = (
 		Input.get_action_strength("ui_right") 
@@ -25,17 +23,25 @@ func physics_update(delta: float) -> void:
 		else:
 			input_direction_x = -1
 			
+	if player.get_slide_count() > 0:
+		var collision = player.get_slide_collision(0)
+		#Check that collision happened on the left side or right side
+		if collision.normal.x == 1 or collision.normal.x == -1:
+			var box = collision.collider
+			if box.name == "Box" and box.is_on_floor():
+				state_machine.transition_to("Push")
+				return
+
 	player.update_direction(input_direction_x)
 	player.velocity.x = player.walk_speed * input_direction_x
 	player.velocity.y = player.gravity * delta
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
-	
+
 	if Input.is_action_just_pressed("jump"):
 		state_machine.transition_to("Jump")
 	elif is_equal_approx(input_direction_x, 0.0):
 		state_machine.transition_to("Idle")
 	elif Input.is_action_just_pressed("attack"):
 		state_machine.transition_to("Attack")
-	elif Input.is_action_just_pressed("dash"):
+	elif Input.is_action_just_pressed("dash") and player.num_dashes > 0:
 		state_machine.transition_to("Dash")
-#

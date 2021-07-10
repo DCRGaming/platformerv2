@@ -1,12 +1,13 @@
 extends PlayerState
 
 func enter() -> void:
+	player.num_dashes -= 1
 	player.is_dashing = true
-	player.velocity.y = 0
 	player.animation_state.travel("Dash")
 
 
 func physics_update(_delta: float) -> void:
+	player.velocity.y = 0
 	
 	if player.direction == "right":
 		player.velocity.x = player.dash_speed

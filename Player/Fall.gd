@@ -21,5 +21,5 @@ func physics_update(delta: float) -> void:
 	player.velocity.y += player.gravity * delta
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 
-	if Input.is_action_just_pressed("dash"):
+	if Input.is_action_just_pressed("dash") and player.num_dashes > 0:
 		state_machine.transition_to("Dash")
