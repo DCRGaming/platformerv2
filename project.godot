@@ -10,6 +10,16 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "KinematicBody2D",
+"class": "Box",
+"language": "GDScript",
+"path": "res://Objects/Box.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "GroundButton",
+"language": "GDScript",
+"path": "res://Objects/GroundButton.gd"
+}, {
+"base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
 "path": "res://Player/Player.gd"
@@ -30,6 +40,8 @@ _global_script_classes=[ {
 "path": "res://StateMachine.gd"
 } ]
 _global_script_class_icons={
+"Box": "",
+"GroundButton": "",
 "Player": "",
 "PlayerState": "",
 "State": "",
@@ -73,6 +85,7 @@ dash={
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Enemy"
+2d_physics/layer_3="Object"
 
 [physics]
 

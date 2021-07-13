@@ -291,7 +291,7 @@ dash_speed = 300
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 13 )
 vframes = 38
-frame = 9
+frame = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.842798, 0.655509 )

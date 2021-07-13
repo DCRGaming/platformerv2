@@ -19,7 +19,7 @@ func physics_update(delta: float) -> void:
 	
 	player.update_direction(input_direction_x)
 	player.velocity.x = player.walk_speed * input_direction_x
-	player.velocity.y += player.gravity * delta
+	player.apply_gravity(delta)
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 
 	if Input.is_action_just_pressed("dash") and player.num_dashes > 0:
