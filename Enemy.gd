@@ -52,7 +52,7 @@ func _physics_process(delta: float) -> void:
 			$AnimatedSprite.play("Walk")
 			update_direction(input_direction_x)
 			velocity.x = walk_speed * input_direction_x
-			velocity.y = gravity * delta
+			apply_gravity(delta)
 			velocity = move_and_slide(velocity, Vector2.UP)
 		states.DEATH:
 			$AnimatedSprite.play("Death")
@@ -60,6 +60,9 @@ func _physics_process(delta: float) -> void:
 			yield($AnimatedSprite, "animation_finished")
 			queue_free()
 
+
+func apply_gravity(delta) -> void:
+	velocity.y += gravity * delta
 
 func _on_MoveTimer_timeout() -> void:
 	input_direction_x = get_random_direction()

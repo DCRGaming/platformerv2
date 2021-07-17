@@ -53,3 +53,9 @@ func apply_gravity(delta) -> void:
 
 func reset_dash_counter(value) -> void:
 	num_dashes = value	
+
+
+func has_dashes() -> bool:
+	if num_dashes > 0:
+		return true
+	return false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Tiles/background.png" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/bg_2.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Objects/Box.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/GroundButton.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/StoneGate.tscn" type="PackedScene" id=10]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 5 )
@@ -49,16 +50,22 @@ position = Vector2( 120.796, 24.4247 )
 [node name="Switch" parent="." instance=ExtResource( 6 )]
 position = Vector2( 59.5948, 132.168 )
 
+[node name="StoneGate" parent="Switch" instance=ExtResource( 10 )]
+position = Vector2( -12.75, -108.25 )
+
 [node name="Enemy" parent="." instance=ExtResource( 8 )]
 position = Vector2( 42.3785, 136.141 )
 
 [node name="GroundButton" parent="." instance=ExtResource( 9 )]
 position = Vector2( 157.606, 32.1393 )
 
+[node name="StoneGate" parent="GroundButton" instance=ExtResource( 10 )]
+position = Vector2( -0.778549, 56.1559 )
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2( 164.795, 75.117 )
+position = Vector2( 321.147, 3.81126 )
 scale = Vector2( 3.33124, 3.74004 )
 polygon = PoolVector2Array( -5, 5, 5, 5, 10, 10, -10, 10 )

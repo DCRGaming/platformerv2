@@ -26,5 +26,5 @@ func physics_update(delta: float) -> void:
 														4, 
 														player.floor_max_angle)
 	
-	if Input.is_action_just_pressed("dash") and player.num_dashes > 0:
+	if Input.is_action_just_pressed("dash") and player.has_dashes():
 		state_machine.transition_to("Dash")

@@ -3,7 +3,7 @@ extends PlayerState
 func enter() -> void:
 	player.velocity.x = 0
 	player.animation_state.travel("Idle")
-	if player.num_dashes == 0:
+	if not player.has_dashes():
 		player.reset_dash_counter(1)
 
 
@@ -29,6 +29,6 @@ func physics_update(delta: float) -> void:
 		state_machine.transition_to("Walk")
 	elif Input.is_action_just_pressed("attack"):
 		state_machine.transition_to("Attack")
-	elif Input.is_action_just_pressed("dash") and player.num_dashes > 0:
+	elif Input.is_action_just_pressed("dash") and player.has_dashes():
 		state_machine.transition_to("Dash")
 

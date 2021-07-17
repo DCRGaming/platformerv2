@@ -54,7 +54,7 @@ func physics_update(delta: float) -> void:
 		state_machine.transition_to("Idle")
 	elif Input.is_action_just_pressed("attack"):
 		state_machine.transition_to("Attack")
-	elif Input.is_action_just_pressed("dash") and player.num_dashes > 0:
+	elif Input.is_action_just_pressed("dash") and player.has_dashes():
 		state_machine.transition_to("Dash")
 
 # Allow player to push box in rotated position
@@ -65,7 +65,8 @@ func push_is_box_rotated(normal_x, rotated) -> bool:
 # Allow player to push box in flat position
 func push_is_box_flat(normal_x) -> bool:
 	return is_equal_approx(abs(normal_x), 1.0)
-	
+
+
 # Check player is not standing on top of box	
 func is_player_not_on_top_box(normal_y) -> bool:
 	return normal_y != -1
