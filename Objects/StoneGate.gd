@@ -37,7 +37,6 @@ func _physics_process(_delta: float) -> void:
 				is_opened = true
 
 	if state_queue.size() > 0:
-		print(state_queue)
 		var next_state = state_queue.back()
 		if state == next_state:
 			return

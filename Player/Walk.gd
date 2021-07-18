@@ -38,12 +38,12 @@ func physics_update(delta: float) -> void:
 	if player.get_slide_count() > 0:
 		for i in player.get_slide_count():
 			var collision = player.get_slide_collision(i)
-			var box = collision.collider
-			if box is Box:
-				if box.is_on_floor():
+			var collider = collision.collider
+			if collider is Box:
+				if collider.is_on_floor():
 					if is_player_not_on_top_box(collision.normal.y):
 						if push_is_box_rotated(
-							collision.normal.x, box.rotation_degrees) or \
+							collision.normal.x, collider.rotation_degrees) or \
 							push_is_box_flat(collision.normal.x):
 							state_machine.transition_to("Push")
 							return

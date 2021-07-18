@@ -25,6 +25,14 @@ func physics_update(delta: float) -> void:
 														true, 
 														4, 
 														player.floor_max_angle)
+
+	if player.get_slide_count() > 0:
+		for i in player.get_slide_count():
+			var collision = player.get_slide_collision(i)
+			var collider = collision.collider
+			if collider is SpikePit:
+				if collision.normal.y == -1:
+					print("spike pit killed player in fall")
 	
 	if Input.is_action_just_pressed("dash") and player.has_dashes():
 		state_machine.transition_to("Dash")
