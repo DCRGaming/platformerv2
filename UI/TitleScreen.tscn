@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://UI/TitleScreen.gd" type="Script" id=1]
+[ext_resource path="res://assets/UI/title.png" type="Texture" id=2]
+[ext_resource path="res://assets/Fonts/Kenney Pixel.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/SoundEffects/ButtonSounds.wav" type="AudioStream" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 240.0
+margin_bottom = 160.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="."]
+margin_left = 90.0
+margin_top = 87.0
+margin_right = 151.0
+margin_bottom = 107.0
+custom_fonts/font = SubResource( 1 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsButton" type="Button" parent="."]
+margin_left = 89.0
+margin_top = 118.0
+margin_right = 152.0
+margin_bottom = 138.0
+custom_fonts/font = SubResource( 2 )
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonSounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="button_down" from="SettingsButton" to="." method="_on_SettingsButton_button_down"]
+[connection signal="button_up" from="SettingsButton" to="." method="_on_SettingsButton_button_up"]

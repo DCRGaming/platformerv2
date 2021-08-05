@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/HUD/MobileControls/jump_pressed.png" type="Texture" id=1]
+[ext_resource path="res://assets/HUD/MobileControls/left_unpressed.png" type="Texture" id=2]
+[ext_resource path="res://assets/HUD/MobileControls/attack_pressed.png" type="Texture" id=3]
+[ext_resource path="res://assets/HUD/MobileControls/dash_pressed.png" type="Texture" id=4]
+[ext_resource path="res://assets/HUD/MobileControls/right_unpressed.png" type="Texture" id=5]
+[ext_resource path="res://assets/HUD/MobileControls/attack_unpressed.png" type="Texture" id=6]
+[ext_resource path="res://assets/HUD/MobileControls/left_pressed.png" type="Texture" id=7]
+[ext_resource path="res://assets/HUD/MobileControls/dash_unpressed.png" type="Texture" id=8]
+[ext_resource path="res://assets/HUD/MobileControls/right_pressed.png" type="Texture" id=9]
+[ext_resource path="res://assets/HUD/MobileControls/jump_unpressed.png" type="Texture" id=10]
+
+[node name="MobileControls" type="CanvasLayer"]
+
+[node name="PlayerControls" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -113.0
+margin_top = -30.0
+margin_right = 121.0
+margin_bottom = -6.0
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Movement" type="HBoxContainer" parent="PlayerControls"]
+margin_right = 102.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftButton" type="TextureButton" parent="PlayerControls/Movement"]
+margin_right = 49.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightButton" type="TextureButton" parent="PlayerControls/Movement"]
+margin_left = 53.0
+margin_right = 102.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerControls"]
+margin_left = 132.0
+margin_right = 234.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttackButton" type="TextureButton" parent="PlayerControls/HBoxContainer"]
+margin_right = 34.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 3 )
+
+[node name="JumpButton" type="TextureButton" parent="PlayerControls/HBoxContainer"]
+margin_left = 34.0
+margin_right = 68.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DashButton" type="TextureButton" parent="PlayerControls/HBoxContainer"]
+margin_left = 68.0
+margin_right = 102.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

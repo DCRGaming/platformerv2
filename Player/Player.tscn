@@ -106,7 +106,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 0.6
 loop = true
 step = 0.2
@@ -123,7 +123,7 @@ tracks/0/keys = {
 "values": [ 12, 13, 14 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 0.8
 loop = true
 step = 0.2
@@ -140,7 +140,7 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 0.6
 loop = true
 step = 0.2
@@ -157,7 +157,7 @@ tracks/0/keys = {
 "values": [ 15, 16, 17 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 length = 1.2
 loop = true
 step = 0.2
@@ -174,7 +174,7 @@ tracks/0/keys = {
 "values": [ 18, 18, 19, 20, 21, 22, 23 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=10]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -190,28 +190,26 @@ tracks/0/keys = {
 "values": [ 24, 25, 26, 27, 28, 29 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=10]
+[sub_resource type="AnimationNodeAnimation" id=11]
 animation = "Attack"
 
-[sub_resource type="AnimationNodeAnimation" id=11]
+[sub_resource type="AnimationNodeAnimation" id=12]
 animation = "Dash"
 
-[sub_resource type="AnimationNodeAnimation" id=12]
+[sub_resource type="AnimationNodeAnimation" id=13]
 animation = "Fall"
 
-[sub_resource type="AnimationNodeAnimation" id=13]
+[sub_resource type="AnimationNodeAnimation" id=14]
 animation = "Idle"
 
-[sub_resource type="AnimationNodeAnimation" id=14]
+[sub_resource type="AnimationNodeAnimation" id=15]
 animation = "Jump"
 
-[sub_resource type="AnimationNodeAnimation" id=15]
+[sub_resource type="AnimationNodeAnimation" id=16]
 animation = "Push"
 
-[sub_resource type="AnimationNodeAnimation" id=16]
+[sub_resource type="AnimationNodeAnimation" id=17]
 animation = "Walk"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=17]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=18]
 
@@ -230,26 +228,26 @@ animation = "Walk"
 [sub_resource type="AnimationNodeStateMachineTransition" id=25]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=26]
-switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=27]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=28]
 switch_mode = 2
 auto_advance = true
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+
 [sub_resource type="AnimationNodeStateMachineTransition" id=29]
+switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=30]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=31]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=32]
-switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=33]
+switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=34]
 
@@ -257,28 +255,30 @@ auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=36]
 
-[sub_resource type="AnimationNodeStateMachine" id=37]
-states/Attack/node = SubResource( 10 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachine" id=38]
+states/Attack/node = SubResource( 11 )
 states/Attack/position = Vector2( 594, -16 )
-states/Dash/node = SubResource( 11 )
+states/Dash/node = SubResource( 12 )
 states/Dash/position = Vector2( 556, 509.872 )
-states/Fall/node = SubResource( 12 )
+states/Fall/node = SubResource( 13 )
 states/Fall/position = Vector2( 664, 354 )
-states/Idle/node = SubResource( 13 )
+states/Idle/node = SubResource( 14 )
 states/Idle/position = Vector2( 469, 128 )
-states/Jump/node = SubResource( 14 )
+states/Jump/node = SubResource( 15 )
 states/Jump/position = Vector2( 469, 359 )
-states/Push/node = SubResource( 15 )
+states/Push/node = SubResource( 16 )
 states/Push/position = Vector2( 837, 263.944 )
-states/Walk/node = SubResource( 16 )
+states/Walk/node = SubResource( 17 )
 states/Walk/position = Vector2( 664, 128 )
-transitions = [ "Idle", "Walk", SubResource( 17 ), "Walk", "Idle", SubResource( 18 ), "Idle", "Fall", SubResource( 19 ), "Fall", "Idle", SubResource( 20 ), "Idle", "Jump", SubResource( 21 ), "Jump", "Fall", SubResource( 22 ), "Walk", "Jump", SubResource( 23 ), "Walk", "Fall", SubResource( 24 ), "Idle", "Attack", SubResource( 25 ), "Attack", "Idle", SubResource( 26 ), "Jump", "Dash", SubResource( 27 ), "Dash", "Fall", SubResource( 28 ), "Fall", "Dash", SubResource( 29 ), "Idle", "Dash", SubResource( 30 ), "Walk", "Dash", SubResource( 31 ), "Dash", "Idle", SubResource( 32 ), "Walk", "Push", SubResource( 33 ), "Push", "Jump", SubResource( 34 ), "Push", "Fall", SubResource( 35 ), "Push", "Idle", SubResource( 36 ) ]
+transitions = [ "Idle", "Walk", SubResource( 18 ), "Walk", "Idle", SubResource( 19 ), "Idle", "Fall", SubResource( 20 ), "Fall", "Idle", SubResource( 21 ), "Idle", "Jump", SubResource( 22 ), "Jump", "Fall", SubResource( 23 ), "Walk", "Jump", SubResource( 24 ), "Walk", "Fall", SubResource( 25 ), "Idle", "Attack", SubResource( 26 ), "Attack", "Idle", SubResource( 27 ), "Jump", "Dash", SubResource( 28 ), "Dash", "Fall", SubResource( 29 ), "Fall", "Dash", SubResource( 30 ), "Idle", "Dash", SubResource( 31 ), "Walk", "Dash", SubResource( 32 ), "Dash", "Idle", SubResource( 33 ), "Walk", "Push", SubResource( 34 ), "Push", "Jump", SubResource( 35 ), "Push", "Fall", SubResource( 36 ), "Push", "Idle", SubResource( 37 ) ]
 start_node = "Idle"
 graph_offset = Vector2( 259, -4.056 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=38]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=39]
 
-[sub_resource type="CapsuleShape2D" id=39]
+[sub_resource type="CapsuleShape2D" id=40]
 radius = 3.06959
 height = 7.65147
 
@@ -291,7 +291,7 @@ dash_speed = 300
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 13 )
 vframes = 38
-frame = 10
+frame = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.842798, 0.655509 )
@@ -301,17 +301,17 @@ shape = SubResource( 1 )
 anims/Attack = SubResource( 2 )
 anims/Dash = SubResource( 3 )
 anims/Death = SubResource( 4 )
-anims/Fall = SubResource( 5 )
-anims/Idle = SubResource( 6 )
-anims/Jump = SubResource( 7 )
-anims/Push = SubResource( 8 )
-anims/Walk = SubResource( 9 )
+anims/Fall = SubResource( 6 )
+anims/Idle = SubResource( 7 )
+anims/Jump = SubResource( 8 )
+anims/Push = SubResource( 9 )
+anims/Walk = SubResource( 10 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 37 )
+tree_root = SubResource( 38 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 38 )
+parameters/playback = SubResource( 39 )
 
 [node name="HitboxPosition" type="Position2D" parent="."]
 position = Vector2( -0.817581, 2.6 )
@@ -321,7 +321,7 @@ position = Vector2( -0.817581, 2.6 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxPosition/Hitbox"]
 position = Vector2( 11.6691, 1.90735e-06 )
 rotation = 1.5708
-shape = SubResource( 39 )
+shape = SubResource( 40 )
 disabled = true
 
 [node name="StateMachine" type="Node" parent="."]
