@@ -4,6 +4,10 @@ func enter() -> void:
 	player.animation_state.travel("Fall")
 
 
+func exit() -> void:
+	SoundManager.land_sound.play()
+	
+
 func physics_update(delta: float) -> void:
 	
 	if player.is_on_floor():
@@ -32,7 +36,11 @@ func physics_update(delta: float) -> void:
 			var collider = collision.collider
 			if collider is SpikePit:
 				if collision.normal.y == -1:
-					print("spike pit killed player in fall")
+					state_machine.transition_to("Death")
+					return
+			elif collider is SpikeClub:
+				state_machine.transition_to("Death")
+				return
 	
 	if Input.is_action_just_pressed("dash") and player.has_dashes():
 		state_machine.transition_to("Dash")

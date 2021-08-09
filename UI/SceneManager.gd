@@ -1,20 +1,23 @@
 extends CanvasLayer
 
 onready var animation_player: AnimationPlayer = $AnimationPlayer
-var init_scene: String = "res://UI/LogoScreen.tscn"
+export var next_scene: PackedScene
 var last_played_anim = null
 var color_dark = Color(56, 62, 96, 255) 
 var color_light = Color(255, 255, 255, 255)
 
+# Time
+var current_time
+
 func _ready() -> void:
-	change_scene(init_scene, "DarkFade")
+	change_scene(next_scene, "DarkFade")
 
 
 func change_scene(new_scene, anim = null) -> void:
 	if anim:
 		reset_color_rect(anim)
 		animation_player.play(anim)
-	get_tree().change_scene(new_scene)
+	get_tree().change_scene_to(new_scene)
 	last_played_anim = anim
 
 
@@ -30,3 +33,5 @@ func reset_color_rect(anim) -> void:
 			SceneManager.get_node("ColorRect").color = color_dark
 		"LightFade":
 			SceneManager.get_node("ColorRect").color = color_light
+		"RestartLevelFade":
+			SceneManager.get_node("ColorRect").color = color_dark

@@ -7,6 +7,10 @@ func enter() -> void:
 		player.reset_dash_counter(1)
 
 
+func exit() -> void:
+	pass
+
+
 func physics_update(delta: float) -> void:
 	
 	if not player.is_on_floor():
@@ -21,6 +25,14 @@ func physics_update(delta: float) -> void:
 														true, 
 														4, 
 														player.floor_max_angle)
+														
+	if player.get_slide_count() > 0:
+		for i in player.get_slide_count():
+			var collision = player.get_slide_collision(i)
+			var collider = collision.collider
+			if collider is SpikeClub:
+				state_machine.transition_to("Death")
+				return
 	
 	if Input.is_action_just_pressed("jump"):
 		state_machine.transition_to("Jump")

@@ -4,6 +4,10 @@ func enter() -> void:
 	player.animation_state.travel("Push")
 
 
+func exit() -> void:
+	pass
+	
+
 func physics_update(delta: float) -> void:
 	
 	if not player.is_on_floor():

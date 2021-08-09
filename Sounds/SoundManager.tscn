@@ -34,6 +34,7 @@ volume_db = -10.0
 
 [node name="AttackSound" type="AudioStreamPlayer" parent="SoundEffects"]
 stream = ExtResource( 10 )
+volume_db = -10.0
 
 [node name="ButtonSound" type="AudioStreamPlayer" parent="SoundEffects"]
 stream = ExtResource( 7 )
@@ -43,12 +44,15 @@ stream = ExtResource( 6 )
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="SoundEffects"]
 stream = ExtResource( 9 )
+volume_db = -10.0
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="SoundEffects"]
 stream = ExtResource( 12 )
+volume_db = -10.0
 
 [node name="LandSound" type="AudioStreamPlayer" parent="SoundEffects"]
 stream = ExtResource( 11 )
+volume_db = -10.0
 
 [node name="LevelCompleteSound" type="AudioStreamPlayer" parent="SoundEffects"]
 stream = ExtResource( 5 )

@@ -1,6 +1,6 @@
 extends TextureRect
 
-var next_scene: String = "res://UI/TitleScreen.tscn"
+export var next_scene: PackedScene
 onready var timer: Timer = $Timer
 var duration: int = 1
 

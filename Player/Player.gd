@@ -59,3 +59,14 @@ func has_dashes() -> bool:
 	if num_dashes > 0:
 		return true
 	return false
+
+
+func play_death_sound() -> void:
+	SoundManager.death_sound.play()
+
+
+func restart_level() -> void:
+	var current_level = get_parent().name
+	var path = "res://Levels/" + current_level + ".tscn"
+	var current_scene = load(path)
+	SceneManager.change_scene(current_scene, "RestartLevelFade")

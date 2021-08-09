@@ -4,6 +4,10 @@ func enter() -> void:
 	player.animation_state.travel("Walk")
 
 
+func exit() -> void:
+	pass
+	
+
 func physics_update(delta: float) -> void:
 
 	if not player.is_on_floor():
@@ -46,7 +50,9 @@ func physics_update(delta: float) -> void:
 							collision.normal.x, collider.rotation_degrees) or \
 							push_is_box_flat(collision.normal.x):
 							state_machine.transition_to("Push")
-							return
+			elif collider is SpikeClub:
+				state_machine.transition_to("Death")
+				return
 
 	if Input.is_action_just_pressed("jump"):
 		state_machine.transition_to("Jump")

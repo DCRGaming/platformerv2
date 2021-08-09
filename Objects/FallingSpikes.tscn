@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://FallingSpikes.gd" type="Script" id=1]
+[ext_resource path="res://Objects/FallingSpikes.gd" type="Script" id=1]
 [ext_resource path="res://assets/HUD/misc_sheet.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]

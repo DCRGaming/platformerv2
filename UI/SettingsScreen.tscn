@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Fonts/Kenney Pixel.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/SettingsScreen.gd" type="Script" id=2]
-[ext_resource path="res://assets/SoundEffects/ButtonSounds.wav" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -54,7 +53,8 @@ margin_top = 16.0
 margin_right = 153.0
 margin_bottom = 55.0
 size_flags_vertical = 3
-value = 50.0
+max_value = 20.0
+value = 10.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -71,7 +71,8 @@ margin_top = 75.0
 margin_right = 153.0
 margin_bottom = 115.0
 size_flags_vertical = 3
-value = 50.0
+max_value = 20.0
+value = 10.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -90,9 +91,6 @@ size_flags_horizontal = 0
 custom_fonts/font = SubResource( 3 )
 text = "Back"
 align = 0
-
-[node name="ButtonSounds" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
 
 [connection signal="scrolling" from="VBoxContainer/MusicScrollBar" to="." method="_on_MusicScrollBar_scrolling"]
 [connection signal="scrolling" from="VBoxContainer/SoundEffectsScrollBar" to="." method="_on_SoundEffectsScrollBar_scrolling"]
