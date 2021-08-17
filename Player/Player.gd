@@ -20,6 +20,7 @@ var snap_direction: Vector2 = Vector2.DOWN
 var snap_vector = snap_direction * snap_length
 var floor_max_angle = deg2rad(65)
 
+
 func set_direction_right() -> void:
 	direction = "right"
 	$Sprite.flip_h = false

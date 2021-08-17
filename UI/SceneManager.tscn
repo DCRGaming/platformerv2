@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://UI/SceneManager.gd" type="Script" id=1]
-[ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "RestartLevelFade"
@@ -55,11 +54,10 @@ tracks/0/keys = {
 
 [node name="SceneManager" type="CanvasLayer"]
 script = ExtResource( 1 )
-next_scene = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 240.0
-margin_bottom = 160.0
+margin_right = 320.0
+margin_bottom = 180.0
 mouse_filter = 2
 color = Color( 0.219608, 0.243137, 0.376471, 1 )
 __meta__ = {

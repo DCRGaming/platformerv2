@@ -10,6 +10,7 @@ var starting_rotation
 var ending_rotation
 var direction: int = 1
 
+
 func _ready() -> void:
 	if left:
 		starting_rotation = 0

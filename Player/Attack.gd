@@ -1,5 +1,6 @@
 extends PlayerState
 
+
 func enter() -> void:
 	player.is_attacking = true
 	player.animation_state.travel("Attack")

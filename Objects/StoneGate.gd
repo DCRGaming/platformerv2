@@ -14,6 +14,7 @@ enum states {
 	OPEN
 }
 
+
 func _ready() -> void:
 	state = states.IDLE
 

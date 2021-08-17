@@ -1,5 +1,6 @@
 extends PlayerState
 
+
 func enter() -> void:
 	player.velocity.x = 0
 	player.animation_state.travel("Idle")

@@ -4,6 +4,7 @@ onready var animated_sprite = $AnimatedSprite
 
 var is_switch_open = false
 
+
 func _on_Switch_area_entered(area: Area2D) -> void:
 	if area.owner is Player:
 		if not is_switch_open:

@@ -1,7 +1,7 @@
 extends Control
 
 
-export var next_scene: PackedScene
+var next_scene: PackedScene = SceneManager.LogoScreen
 
 onready var parallax_layer: ParallaxLayer = $ParallaxBackground/ParallaxLayer
 onready var timer: Timer = $Timer
@@ -12,16 +12,16 @@ onready var animation_player: AnimationPlayer = $AnimationPlayer
 var counter = 0
 var scroll_speed: int = 10
 var credit_list = [
-	["Game Director", "DCRKev",],
-	["Programming", "DCRKev"],
+	["Game Director", "DCR",],
+	["Programming", "DCR"],
 	["Art", "https://o-lobster.itch.io/"],
-	["Animation", "DCRKev"],
-	["Level Design", "DCRKev"],
+	["Animation", "https://o-lobster.itch.io/"],
+	["Level Design", "DCR"],
 	["Music", "Matthew Pablo \n (http://www.matthewpablo.com)" ],
-	["Sound Effects", "Jalastram \n Jesus Lastra \n Virix David McKee \n NenadSimic \n Lamoot"],
+	["Sound Effects", "Jalastram \n Jesus Lastra \n Virix David McKee \n NenadSimic \n qubodup \n Lamoot \n Macro"],
 	["Font", "Kenney Pixel"],
 	["Programs", "Krita \n Godot"],
-	["Thank You!", "DCRKev"]
+	["Thank You!", "DCR"]
 ]
 
 

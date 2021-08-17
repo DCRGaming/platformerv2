@@ -5,8 +5,8 @@ export var settings_scene: PackedScene
 
 
 func _ready() -> void:
-	SoundManager.stop_all_music()
-	SoundManager.title_screen_music.play()
+	if not SoundManager.title_screen_music.playing:
+		SoundManager.title_screen_music.play()
 
 
 func _on_SettingsButton_button_up() -> void:

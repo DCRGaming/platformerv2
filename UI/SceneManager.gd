@@ -1,16 +1,18 @@
 extends CanvasLayer
 
 onready var animation_player: AnimationPlayer = $AnimationPlayer
-export var next_scene: PackedScene
 var last_played_anim = null
 var color_dark = Color(56, 62, 96, 255) 
 var color_light = Color(255, 255, 255, 255)
+
+# UI Screens
+onready var LogoScreen = load("res://UI/LogoScreen.tscn")
 
 # Time
 var current_time
 
 func _ready() -> void:
-	change_scene(next_scene, "DarkFade")
+	change_scene(LogoScreen, "DarkFade")
 
 
 func change_scene(new_scene, anim = null) -> void:

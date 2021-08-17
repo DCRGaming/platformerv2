@@ -19,31 +19,31 @@ __meta__ = {
 }
 
 [node name="LeftButton" type="TouchScreenButton" parent="."]
-position = Vector2( 10, 130 )
+position = Vector2( 10, 150 )
 normal = ExtResource( 1 )
 pressed = ExtResource( 3 )
 action = "ui_left"
 
 [node name="RightButton" type="TouchScreenButton" parent="."]
-position = Vector2( 50, 130 )
+position = Vector2( 50, 150 )
 normal = ExtResource( 2 )
 pressed = ExtResource( 4 )
 action = "ui_right"
 
 [node name="AttackButton" type="TouchScreenButton" parent="."]
-position = Vector2( 135, 130 )
+position = Vector2( 200, 150 )
 normal = ExtResource( 9 )
 pressed = ExtResource( 7 )
 action = "attack"
 
 [node name="JumpButton" type="TouchScreenButton" parent="."]
-position = Vector2( 170, 130 )
+position = Vector2( 240, 150 )
 normal = ExtResource( 11 )
 pressed = ExtResource( 6 )
 action = "jump"
 
 [node name="DashButton" type="TouchScreenButton" parent="."]
-position = Vector2( 205, 130 )
+position = Vector2( 280, 150 )
 normal = ExtResource( 10 )
 pressed = ExtResource( 8 )
 action = "dash"

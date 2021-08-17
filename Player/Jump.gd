@@ -1,5 +1,6 @@
 extends PlayerState
 
+
 func enter() -> void:
 	player.velocity.y = player.jump_speed
 	player.animation_state.travel("Jump")

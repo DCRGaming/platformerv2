@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tiles/TileMap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Tiles/background.png" type="Texture" id=3]
+[ext_resource path="res://assets/Tiles/bg_2.png" type="Texture" id=4]
+[ext_resource path="res://Objects/Door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Mobile/PlayerControls.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/Level3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/SpikePit.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Levels/LevelTemplate.gd" type="Script" id=15]
+
+[node name="Level2" type="Node2D"]
+script = ExtResource( 15 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 73.0
+margin_bottom = 66.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Foreground" type="TextureRect" parent="Background"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="SpikePit" parent="Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 120.755, 164.438 )
+
+[node name="SpikePit2" parent="Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 104.559, 163.714 )
+
+[node name="SpikePit3" parent="Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 184.605, 164.199 )
+
+[node name="SpikePit4" parent="Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 169.459, 164.422 )
+
+[node name="SpikePit5" parent="Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 152.978, 164.422 )
+
+[node name="SpikePit6" parent="Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 137.387, 163.753 )
+
+[node name="SpikePit7" parent="Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 215.563, 163.976 )
+
+[node name="SpikePit10" parent="Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 230.931, 163.976 )
+
+[node name="SpikePit8" parent="Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 88.8331, 163.531 )
+
+[node name="SpikePit9" parent="Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 199.75, 163.976 )
+
+[node name="Door" parent="." instance=ExtResource( 5 )]
+position = Vector2( 291.041, 163.861 )
+next_scene = ExtResource( 7 )
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 23.8815, 24.5735 )
+
+[node name="TileMap" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 1, -65535, 0, 1, -65534, 0, 131076, -65533, 0, 1, -65532, 0, 131076, -65531, 0, 131076, -65530, 0, 131076, -65529, 0, 131076, -65528, 0, 131076, -65527, 0, 1, -65526, 0, 131076, -65525, 0, 1, -65524, 0, 1, -65523, 0, 1, -65522, 0, 131076, -65521, 0, 1, -65520, 0, 1, -65519, 0, 131076, -65518, 0, 131076, -65517, 0, 1, -65516, 0, 2, 65535, 0, 65536, 0, 0, 3, 1, 0, 4, 2, 0, 4, 3, 0, 5, 4, 0, 3, 5, 0, 4, 6, 0, 4, 7, 0, 4, 8, 0, 4, 9, 0, 131073, 10, 0, 4, 11, 0, 131073, 12, 0, 131073, 13, 0, 4, 14, 0, 131073, 15, 0, 131073, 16, 0, 131073, 17, 0, 131073, 18, 0, 4, 19, 0, 5, 20, 0, 65539, 131071, 0, 65536, 65536, 0, 65538, 65539, 0, 65541, 65540, 0, 65538, 65555, 0, 65541, 65556, 0, 65538, 196607, 0, 65541, 131072, 0, 131075, 131073, 0, 2, 131075, 0, 65541, 131076, 0, 65539, 131079, 0, 0, 131080, 0, 2, 131083, 0, 0, 131084, 0, 2, 131087, 0, 0, 131088, 0, 2, 131091, 0, 65541, 131092, 0, 65538, 262143, 0, 65541, 196608, 0, 3, 196609, 0, 131074, 196611, 0, 65541, 196612, 0, 65539, 196615, 0, 131072, 196616, 0, 131074, 196619, 0, 131072, 196620, 0, 131074, 196623, 0, 131072, 196624, 0, 131074, 196627, 0, 65536, 196628, 0, 65539, 327679, 0, 65541, 262144, 0, 65538, 262147, 0, 65541, 262148, 0, 65539, 262163, 0, 65541, 262164, 0, 65539, 393215, 0, 65536, 327680, 0, 65538, 327682, 0, 0, 327683, 0, 131077, 327684, 0, 131075, 327685, 0, 131076, 327686, 0, 2, 327689, 0, 0, 327690, 0, 2, 327693, 0, 0, 327694, 0, 2, 327699, 0, 65536, 327700, 0, 65538, 458751, 0, 65536, 393216, 0, 65539, 393218, 0, 131072, 393219, 0, 4, 393220, 0, 4, 393221, 0, 4, 393222, 0, 131074, 393225, 0, 131072, 393226, 0, 131074, 393229, 0, 131072, 393230, 0, 131074, 393235, 0, 65541, 393236, 0, 65539, 524287, 0, 65541, 458752, 0, 65539, 458768, 0, 0, 458769, 0, 131076, 458770, 0, 1, 458771, 0, 131077, 458772, 0, 65538, 589823, 0, 65541, 524288, 0, 131075, 524289, 0, 2, 524294, 0, 0, 524295, 0, 2, 524299, 0, 0, 524300, 0, 2, 524304, 0, 131072, 524305, 0, 131073, 524306, 0, 4, 524307, 0, 5, 524308, 0, 65538, 655359, 0, 65536, 589824, 0, 3, 589825, 0, 131074, 589830, 0, 131072, 589831, 0, 131074, 589835, 0, 131072, 589836, 0, 131074, 589843, 0, 65541, 589844, 0, 65539, 720895, 0, 65541, 655360, 0, 65539, 655363, 0, 0, 655364, 0, 2, 655379, 0, 65541, 655380, 0, 65538, 786431, 0, 65541, 720896, 0, 131075, 720897, 0, 131076, 720898, 0, 131076, 720899, 0, 131077, 720900, 0, 131075, 720901, 0, 1, 720902, 0, 1, 720903, 0, 1, 720904, 0, 131076, 720905, 0, 131076, 720906, 0, 1, 720907, 0, 1, 720908, 0, 131076, 720909, 0, 131076, 720910, 0, 1, 720911, 0, 131076, 720912, 0, 1, 720913, 0, 1, 720914, 0, 1, 720915, 0, 131077, 720916, 0, 65539, 851967, 0, 131072, 786432, 0, 131073, 786433, 0, 4, 786434, 0, 4, 786435, 0, 4, 786436, 0, 4, 786437, 0, 4, 786438, 0, 131073, 786439, 0, 4, 786440, 0, 4, 786441, 0, 131073, 786442, 0, 4, 786443, 0, 131073, 786444, 0, 4, 786445, 0, 4, 786446, 0, 4, 786447, 0, 131073, 786448, 0, 131073, 786449, 0, 131073, 786450, 0, 131073, 786451, 0, 4, 786452, 0, 131074 )
+
+[node name="PlayerControls" parent="." instance=ExtResource( 6 )]
+visible = false

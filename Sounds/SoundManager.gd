@@ -22,6 +22,7 @@ onready var land_sound = $SoundEffects/LandSound
 onready var level_complete_sound = $SoundEffects/LevelCompleteSound
 onready var logo_sound = $SoundEffects/LogoSound
 
+
 func update_sound_volume(value, vol_range, type):
 	match type:
 		"Music":

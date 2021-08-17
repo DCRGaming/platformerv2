@@ -13,6 +13,7 @@ var is_on_mid: bool = false
 var slope_angle: int = 63
 var mid_angle: int = 0
 
+
 func _on_Area2D_body_entered(body: Node) -> void:
 	if body is Box:
 		if is_button_pressed == false:

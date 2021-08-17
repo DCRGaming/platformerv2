@@ -7,6 +7,7 @@ onready var ray_cast: RayCast2D = $RayCast2D
 var is_stuck = true
 var velocity: Vector2
 
+
 func _physics_process(delta: float) -> void:
 	if not is_stuck:
 		apply_gravity(delta)
