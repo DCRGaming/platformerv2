@@ -10,3 +10,4 @@ extends Node2D
 #func _process(_delta: float) -> void:
 #	label.text = player.state.name
 ##	print(player.state.name)
+

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MobileControls.png-abbb133a223bb8faf8790073a0f79005.stex"
+path="res://.import/app_icon.png-aca8beb3828fd35852329ede17645aaa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/HUD/MobileControls.png"
-dest_files=[ "res://.import/MobileControls.png-abbb133a223bb8faf8790073a0f79005.stex" ]
+source_file="res://assets/App/app_icon.png"
+dest_files=[ "res://.import/app_icon.png-aca8beb3828fd35852329ede17645aaa.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
